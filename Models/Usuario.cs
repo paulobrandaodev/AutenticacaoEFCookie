@@ -8,14 +8,19 @@ namespace AutenticacaoEFCookie.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int IdUsuario { get; set; }
+
         [Required]
         [StringLength(50,MinimumLength=4)]
-        public string NomeUsuario { get; set; }
-        [StringLength(50,MinimumLength=6)]
+        public string NomeUsuario { get; set; } 
+
         [Required]
+        [StringLength(50,MinimumLength=6)]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+        
         [Required]
         [StringLength(50,MinimumLength=6)]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
     }
 }
