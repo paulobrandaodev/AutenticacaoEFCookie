@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,5 +12,7 @@ namespace AutenticacaoEFCookie.Models
         [Required]
         [StringLength(50, MinimumLength=2)]
         public string NomePermissao { get; set; }
+
+        public ICollection<UsuarioPermissao> UsuarioPermissoes { get; set; }
     }
 }

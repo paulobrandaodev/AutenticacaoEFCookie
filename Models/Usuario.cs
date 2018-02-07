@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -22,5 +23,7 @@ namespace AutenticacaoEFCookie.Models
         [StringLength(50,MinimumLength=6)]
         [DataType(DataType.Password)]
         public string Senha { get; set; }
+
+        public ICollection<UsuarioPermissao> UsuarioPermissoes { get; set; }
     }
 }
