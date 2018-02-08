@@ -1,3 +1,4 @@
+using System.Linq;
 using AutenticacaoEFCookie.Models;
 
 namespace AutenticacaoEFCookie.Dados
@@ -7,6 +8,8 @@ namespace AutenticacaoEFCookie.Dados
         public static void Inicializar(AutenticacaoContexto contexto){
             contexto.Database.EnsureCreated();
 
+            if(contexto.Usuarios.Any()) return;
+            
             var usuario = new Usuario(){
                 NomeUsuario  = "Fernando",
                 Email = "fernando.guerra@corujasdev.com.br",
