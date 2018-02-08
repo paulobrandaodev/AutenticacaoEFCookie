@@ -11,8 +11,8 @@ namespace AutenticacaoEFCookie.Dados
             if(contexto.Usuarios.Any()) return;
             
             var usuario = new Usuario(){
-                NomeUsuario  = "Fernando",
-                Email = "fernando.guerra@corujasdev.com.br",
+                NomeUsuario  = "Paulo",
+                Email = "paulobrandaoofficial@gmail.com",
                 Senha = "123456" 
             };
             contexto.Usuarios.Add(usuario);

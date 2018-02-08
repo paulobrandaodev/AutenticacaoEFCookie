@@ -41,16 +41,16 @@ namespace AutenticacaoEFCookie
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc( routes => {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}"
-                );
-            });
-            
             app.UseAuthentication();
 
             app.UseStaticFiles();
+
+            app.UseMvc( routes => {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Financeiro}/{action=Index}/{id?}"
+                );
+            });
 
         }
     }
